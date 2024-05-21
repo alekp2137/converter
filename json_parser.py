@@ -9,4 +9,8 @@ def validate(file):
         print('parse error: {e}')
         return False
     
-    
+def create(data):
+    return json.dumps(data, indent=2)
+
+def to_data(json_file):
+    return json.load(json_file)

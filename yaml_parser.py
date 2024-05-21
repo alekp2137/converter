@@ -9,3 +9,8 @@ def validate(file):
         print('parse error: {e}')
         return False
     
+def create(data):
+    return yaml.safe_dump(data, default_flow_style=False)
+
+def to_data(yaml_file):
+    return yaml.safe_load(yaml_file)
