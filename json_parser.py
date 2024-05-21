@@ -13,4 +13,5 @@ def create(data):
     return json.dumps(data, indent=2)
 
 def to_data(json_file):
-    return json.load(json_file)
+    with open(json_file, 'r') as f:
+            return json.load(f)
